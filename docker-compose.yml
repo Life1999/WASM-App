@@ -7,5 +7,5 @@ services:
     ports:
       - "8080:8080"  # Expose the container's port to the host machine
     command: >
-      sh -c "cp -r /built_files/* /app/build/ && python3 -m http.server 8080 --directory /app/build"
+      sh -c "cp -r /built_files/* /app/build/ && cd /built_files && cmake /app && make && python3 -m http.server 8080 --directory /app"
     

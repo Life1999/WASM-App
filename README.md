@@ -9,8 +9,8 @@ http://localhost:8080
 
 ### Rebuild components in side the container
 '''
-cd /app
-emcc -g -O0 -s WASM=1 -o /built_files/output.js source.cpp
+cd /built_files
+cmake /app -DCMAKE_TOOLCHAIN_FILE=/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake && make
 '''
 
 ### Prerequisites 
