@@ -8,10 +8,10 @@ http://localhost:8080
 `docker-compose run --rm wasm-app bash`
 
 ### Rebuild components in side the container
-"""
+```
 cd /app
 emcc -g -O0 -s WASM=1 -o /built_files/output.js source.cpp
-"""
+```
 
 ### Prerequisites 
 - docker
