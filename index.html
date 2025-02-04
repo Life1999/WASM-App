@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASM C++ App</title>
+    <script src="output.js"></script>
+</head>
+<body>
+    <h1>WebAssembly with C++</h1>
+    <script>
+        // Make sure the WASM module is loaded and ready
+        Module.onRuntimeInitialized = function () {
+            console.log("WebAssembly Initialized!");
+        };
+    </script>
+</body>
+</html>
