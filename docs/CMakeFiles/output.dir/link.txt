@@ -1,0 +1,1 @@
+/emsdk/upstream/emscripten/em++  -s WASM=1 -s EXPORTED_FUNCTIONS='[_main]' -s MODULARIZE=1 -s EXPORT_ES6=1 -o /built_files/output.js @CMakeFiles/output.dir/objects1.rsp -o output.js 
