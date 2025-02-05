@@ -33,6 +33,6 @@ RUN echo "Listing the /app/docs directory contents after COPY:" && ls -lah /app/
 EXPOSE 8080
 
 # Default command to run (for example, start a simple HTTP server or run the app)
-CMD ["python3", "-m", "http.server", "8080", "--directory", "/app"]
+CMD ["python3", "-m", "http.server", "8080", "--directory", "/app/docs"]
 
 
