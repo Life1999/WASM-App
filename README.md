@@ -1,5 +1,6 @@
 ### Webpage
-http://localhost:8080
+Github Pages: https://life1999.github.io/WASM-App/
+Local: http://localhost:8080
 
 ### Powershell command to run
 `docker-compose down; docker-compose build --progress plain --no-cache; docker-compose up -d`
