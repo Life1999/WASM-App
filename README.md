@@ -8,10 +8,10 @@ http://localhost:8080
 `docker-compose run --rm wasm-app bash`
 
 ### Rebuild components in side the container
-'''
+```
 cd /built_files
 cmake /app -DCMAKE_TOOLCHAIN_FILE=/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake && make
-'''
+```
 
 
 ### Prerequisites 
