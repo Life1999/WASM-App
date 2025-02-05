@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y cmake
 COPY . /app
 
 # Ensure the build directory exists
-RUN mkdir -p /built_files /app/build
+RUN mkdir -p /built_files /app/docs
 
 # Set working directory to build files directory
 WORKDIR /built_files
@@ -24,7 +24,10 @@ WORKDIR /built_files
 RUN cmake /app -DCMAKE_TOOLCHAIN_FILE=/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake && make
 
 # Ensure that source.cpp is being copied into the container and has the correct permissions
-RUN echo "Listing the /app directory contents after COPY:" && ls -lah /built_files
+RUN echo "Listing the /built_files directory contents after COPY:" && ls -lah /built_files
+
+# Ensure that source.cpp is being copied into the container and has the correct permissions
+RUN echo "Listing the /app/docs directory contents after COPY:" && ls -lah /app/docs
 
 # Expose a port if you want to serve the output with a web server
 EXPOSE 8080

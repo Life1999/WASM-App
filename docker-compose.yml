@@ -3,9 +3,9 @@ services:
     build: .
     volumes:
       - .:/app  # This mounts the current directory to the container
-      - ./build:/app/build  # Mount local build directory to /app/build
+      - ./docs:/app/docs  # Mount local build directory to /app/build
     ports:
       - "8080:8080"  # Expose the container's port to the host machine
     command: >
-      sh -c "cp -r /built_files/* /app/build/ && cd /built_files && cmake /app && make && python3 -m http.server 8080 --directory /app"
+      sh -c "cp /app/index.html /app/docs/ && cp -r /built_files/* /app/docs/ && cd /built_files && cmake /app && make && python3 -m http.server 8080 --directory /app"
     

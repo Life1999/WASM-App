@@ -1,2 +1,5 @@
-build/*
 .vs/*
+docs/CMakeFiles/*
+docs/CMakeCache.txt
+docs/cmake_install.cmake
+docs/Makefile
