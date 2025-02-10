@@ -3,3 +3,4 @@ docs/CMakeFiles/*
 docs/CMakeCache.txt
 docs/cmake_install.cmake
 docs/Makefile
+.gitattributes
